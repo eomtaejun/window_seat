@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111d24" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="기차 창가에 앉아 흘러가는 풍경을 바라보는 3D 힐링 여행" />
+    <title>창가 한 자리 — Window Seat</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="scene"></div>
+      <div class="vignette"></div>
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">◒</span><span>창가 한 자리<small>WINDOW SEAT</small></span></div>
+        <div class="top-actions"><span id="route-label">느린 숲길 · 08:24</span><button id="sound-button" class="icon-button" aria-label="소리 켜기">♫ <span>소리 켜기</span></button><button id="settings-button" class="icon-button" aria-label="설정 열기">⚙ <span>설정</span></button></div>
+      </header>
+      <main>
+        <section id="intro" class="intro">
+          <div class="intro-content"><p class="eyebrow">A LITTLE JOURNEY, JUST FOR YOU</p><h1>잠시,<br/><em>창밖을 볼까요?</em></h1><p class="intro-copy">어디로 가는지는 중요하지 않아요.<br/>마음에 드는 자리에 앉아, 흘러가는 풍경을 바라보세요.</p><button id="start-button" class="primary-button">여행 시작하기 <span>↗</span></button><p class="intro-foot">헤드폰을 끼면 더 좋습니다 <span>·</span> PC 브라우저 권장</p></div>
+          <div class="intro-index">01 / THE JOURNEY</div>
+        </section>
+        <div id="crosshair" class="crosshair hidden">·</div>
+        <div id="interaction" class="interaction hidden"><kbd>F</kbd><span>창가에 앉기</span></div>
+        <div id="seated-hint" class="seated-hint hidden">창가에 앉아 있어요 <span>F · 일어나기</span></div>
+        <div id="controls" class="controls hidden"><span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 이동</span><span><kbd>SPACE</kbd> 점프</span><span>마우스 · 둘러보기</span><span><kbd>ESC</kbd> 마우스 해제</span></div>
+        <div id="cursor-tip" class="cursor-tip hidden">화면을 클릭하면 마우스로 둘러볼 수 있어요</div>
+        <div id="loading" class="loading"><span class="loading-line"></span> 여행을 준비하고 있어요</div>
+      </main>
+      <aside id="settings" class="settings" aria-hidden="true"><div class="settings-header"><div><p class="eyebrow">MAKE IT YOUR JOURNEY</p><h2>여행 설정</h2></div><button id="close-settings" class="close-button" aria-label="설정 닫기">×</button></div><div class="settings-scroll"><div class="setting-group"><h3>날씨 <span>WEATHER</span></h3><div class="option-row" data-setting="weather"><button data-value="clear" class="selected">맑음</button><button data-value="rain">비</button><button data-value="snow">눈</button></div></div><div class="setting-group"><h3>시간대 <span>TIME OF DAY</span></h3><div class="option-row" data-setting="time"><button data-value="morning">아침</button><button data-value="day" class="selected">낮</button><button data-value="sunset">노을</button><button data-value="night">밤</button></div></div><div class="setting-group"><h3>풍경 <span>SCENERY</span></h3><div class="option-row" data-setting="landscape"><button data-value="forest" class="selected">숲길</button><button data-value="mountain">산길</button><button data-value="coast">바닷길</button></div></div><div class="setting-group"><h3>기차 <span>TRAIN</span></h3><div class="option-row" data-setting="train"><button data-value="vintage" class="selected">클래식</button><button data-value="modern">모던</button></div></div><div class="setting-note">변경한 설정은 지금 보이는 풍경과 객실에 바로 반영됩니다.</div></div><div class="settings-footer"><button id="reset-button">처음 설정으로 돌아가기 ↺</button></div></aside>
+      <div id="scrim" class="scrim hidden"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
